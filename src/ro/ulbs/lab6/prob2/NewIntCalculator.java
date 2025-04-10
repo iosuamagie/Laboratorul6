@@ -29,4 +29,11 @@ public class NewIntCalculator extends ACalculator {
     protected void init() {
 
     }
+    public NewIntCalculator divide(int value) {
+        if (value == 0) {
+            throw new ArithmeticException("Cannot divide by zero.");
+        }
+        this.state /= value;
+        return this;
+    }
 }
